@@ -7,8 +7,9 @@
     "commit": "git-cz",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "generate-coverage-report": "nyc --reporter=lcov npm test",
+    "lint": "eslint lib/**/*.js test/**/*.js",
     "test": "ava",
-    "validate": "npm run generate-coverage-report && npm run check-coverage"
+    "validate": "npm run lint && npm run generate-coverage-report && npm run check-coverage"
   },
   "keywords": [
     "static",

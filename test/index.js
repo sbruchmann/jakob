@@ -13,8 +13,10 @@ test('Use given options as config', () => {
   expect(jakob.config.root).to.equal(__dirname);
 });
 
-test('Merge given options with default config', () => {
-  const jakob = new Jakob({env: 'test'});
+test('Ensure deep merge of given options and default config', () => {
+  const jakob = new Jakob({env: 'test', directories: {source: 'src'}});
   expect(jakob.config.root).to.equal(process.cwd());
   expect(jakob.config.env).to.equal('test');
+  expect(jakob.config.directories.destination).to.equal('output');
+  expect(jakob.config.directories.source).to.equal('src');
 });

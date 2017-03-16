@@ -42,5 +42,8 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "merge-deep": "3.0.0"
   }
 }

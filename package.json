@@ -4,6 +4,7 @@
   "description": "A static site generator.",
   "main": "./lib/index.js",
   "scripts": {
+    "commit": "git-cz",
     "check-coverage": "nyc check-coverage --statements 100 --branches 100 --functions 100 --lines 100",
     "generate-coverage-report": "nyc --reporter=lcov npm test",
     "test": "ava",
@@ -20,6 +21,8 @@
     "ava": "0.18.2",
     "babel-eslint": "7.1.1",
     "chai": "3.5.0",
+    "commitizen": "2.9.6",
+    "cz-conventional-changelog": "2.0.0",
     "eslint": "3.17.1",
     "eslint-plugin-ava": "4.2.0",
     "nyc": "10.1.2"
@@ -31,5 +34,10 @@
   "bugs": {
     "url": "https://github.com/sbruchmann/jakob/issues"
   },
-  "homepage": "https://github.com/sbruchmann/jakob#readme"
+  "homepage": "https://github.com/sbruchmann/jakob#readme",
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
 }
